@@ -4,13 +4,13 @@
 ## Description
 SFA code for the following papers:
 
-- Li, Dingquan, Tingting Jiang, Weisi Lin, and Ming Jiang. "[Which Has Better Visual Quality: The Clear Blue Sky or a Blurry Animal?](https://ieeexplore.ieee.org/document/8489929)." IEEE Transactions on Multimedia, 2018.
+- Li, Dingquan, Tingting Jiang, Weisi Lin, and Ming Jiang. "[Which Has Better Visual Quality: The Clear Blue Sky or a Blurry Animal?](https://ieeexplore.ieee.org/document/8489929)." IEEE Transactions on Multimedia, vol. 21, no. 5, pp. 1221-1234, May 2019.
 - Li, Dingquan, Tingting Jiang, and Ming Jiang. "[Exploiting High-Level Semantics for No-Reference Image Quality Assessment of Realistic Blur Images](https://dl.acm.org/citation.cfm?id=3123266.3123322)." Proceedings of the 2017 ACM on Multimedia Conference. ACM, 2017.
 
 ## Requirement
 Framework: [Caffe](https://github.com/BVLC/caffe/) 1.0 + [MATLAB](https://www.mathworks.com/products/matlab.html) 2016b Interface
 
-The PLSR model uesd in the test code is trained on [LIVE](http://live.ece.utexas.edu/research/Quality/subjective.htm) gblur images. 
+The PLSR model uesd in the test code is trained on [LIVE](http://live.ece.utexas.edu/research/Quality/subjective.htm) gblur images with DMOS (the larger the worse).
 
 Download the ResNet-50-model.caffemodel from https://github.com/KaimingHe/deep-residual-networks and paste it into the directory "models/" before using the code!
 
@@ -27,7 +27,12 @@ Please cite our papers if it helps your research:
   title={Which Has Better Visual Quality: The Clear Blue Sky or a Blurry Animal?},
   author={Li, Dingquan and Jiang, Tingting and Lin, Weisi and Jiang, Ming},
   booktitle={IEEE Transactions on Multimedia},
-  year={2018}
+  volume={21}, 
+  number={5}, 
+  pages={1221-1234},  
+  month={May},
+  year={2019}, 
+  doi={10.1109/TMM.2018.2875354}
 }</code></pre>
 
 [[Paper](https://ieeexplore.ieee.org/document/8489929)] 
@@ -45,4 +50,4 @@ Please cite our papers if it helps your research:
 [[Poster](./acmmm17_poster-updated.pdf)]
 
 ## Contact
-Dingquan Li, dingquanli@pku.edu.cn.
+Dingquan Li, dingquanli AT pku DOT edu DOT cn.
