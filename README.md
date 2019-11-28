@@ -10,14 +10,25 @@ SFA code for the following papers:
 ## Requirement
 Framework: [Caffe](https://github.com/BVLC/caffe/) 1.0 + [MATLAB](https://www.mathworks.com/products/matlab.html) 2016b Interface
 
-The PLSR model uesd in the test code is trained on [LIVE](http://live.ece.utexas.edu/research/Quality/subjective.htm) gblur images with DMOS (the larger the worse).
+The PLSR model uesd in the test code is trained on [LIVE](http://live.ece.utexas.edu/research/Quality/subjective.htm) gblur images with DMOS (the larger the worse). `w` and `best_layer` in the journal extension are determined by five cross-validation (See `TMMinter.m`).
 
-Download the ResNet-50-model.caffemodel from https://github.com/KaimingHe/deep-residual-networks and paste it into the directory "models/" before using the code!
+The `ResNet-50-model.caffemodel` is downloaded from [KaimingHe/deep-residual-networks](https://github.com/KaimingHe/deep-residual-networks) and it should be pasted into the directory `models/` before you run the code! 
+It's about 100MB which is too large to upload to this repo.
+If you have difficulty, you can also download the `ResNet-50-model.caffemodel` in [my sharing on BaiduNetDisk](https://pan.baidu.com/s/1T32sYjrQA04kl1auArirxw) with password `u8sd`.
 
-## Note for training
-All we need to train is a PLSR model, where the training function is plsregress.m in [MATLAB](https://www.mathworks.com/products/matlab.html). The features are extracted from the DCNN models pre-trained on the image classification task.
+**New!** We provide the [PyTorch](https://pytorch.org) implementation of the method in [SFA-pytorch](./SFA-pytorch/)
+
+## Notes
+### Note for training
+All we need to train is a PLSR model, where the training function is `plsregress` in [MATLAB](https://www.mathworks.com/products/matlab.html). The features are extracted from the DCNN models pre-trained on the image classification task.
 
 Update: remember to change the value of "im_dir" and "im_lists" in data info.
+
+### Note for datasets
+You can download the datasets used in the papers from their owners for research purpose. If you have difficulty, you can refer to [my sharing on BaiduNetDisk](https://pan.baidu.com/s/10rGDziwuQl0fjwDHlhX1dA) with password `b6sv`. We only consider the blur related images in this work.
+
+### Note for cross dataset evaluation
+The reported Spearman correlation (SROCC) is multiplied by `-1` when the training and testing datasets have different forms of subjective scores, i.e., one is MOS and the other is DMOS. This is to make sure that the prediction monotonicity is better when SROCC is closer to 1.
 
 ## Citation
 
